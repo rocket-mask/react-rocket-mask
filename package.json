@@ -1,8 +1,8 @@
 {
   "name": "react-nebo15-mask",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React wrapper for nebo15-mask (github.com/Nebo15/nebo15-mask)",
-  "main": "lib/react-nebo15-mask.js",
+  "main": "lib/react-nebo15-mask.min.js",
   "scripts": {
     "build": "webpack --mode=build",
     "dev": "webpack --progress --colors --watch --mode=dev",

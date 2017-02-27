@@ -14,10 +14,12 @@ export default class NeboMask extends Component {
       showOnFocus,
       hideOnBlur,
       showAlways,
+      withPlaceholder,
       onChange
     } = this.props;
 
     this.mask = new MaskedInput(this.masked, mask, {
+      placeholder: withPlaceholder,
       showOnFocus,
       hideOnBlur,
       showAlways,
