@@ -31,6 +31,11 @@ export default class NeboMask extends Component {
     const { props, mask = {} } = this;
     const {
       component = 'input',
+      showOnFocus,
+      hideOnBlur,
+      showAlways,
+      withPlaceholder,
+      onChange,
       onBlur,
       ...rest
     } = props;
