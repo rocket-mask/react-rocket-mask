@@ -1,6 +1,6 @@
 {
   "name": "react-nebo15-mask",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "React wrapper for nebo15-mask (github.com/Nebo15/nebo15-mask)",
   "main": "lib/react-nebo15-mask.min.js",
   "scripts": {
@@ -50,7 +50,9 @@
   },
   "homepage": "https://github.com/nebo15/react-nebo15-mask",
   "dependencies": {
-    "nebo15-mask": "github:nebo15/nebo15-mask",
-    "react": "^15.4.2"
+    "nebo15-mask": "~0.1.7"
+  },
+  "peerDependencies": {
+    "react": "^15.0.0"
   }
 }

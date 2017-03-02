@@ -8,11 +8,15 @@ export default class NeboMask extends Component {
     this.state = {};
   }
 
+  componentWillReceiveProps(props) {
+    this.mask.model = props.value;
+  }
+
   componentDidMount() {
     const {
       mask,
-      showOnFocus,
-      hideOnBlur,
+      showOnFocus = true,
+      hideOnBlur = true,
       showAlways,
       withPlaceholder,
       onChange

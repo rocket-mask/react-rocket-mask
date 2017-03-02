@@ -7,14 +7,32 @@ var libraryName = 'ReactNebo15Mask';
 
 var plugins = [], outputFile;
 
+var reactExternal = {
+  root: 'React',
+  commonjs2: 'react',
+  commonjs: 'react',
+  amd: 'react'
+};
+
 if (env === 'build') {
-  plugins.push(new UglifyJsPlugin({ minimize: true }));
+  plugins.push(new UglifyJsPlugin({
+    compressor: {
+      pure_getters: true,
+      unsafe: true,
+      unsafe_comps: true,
+      screw_ie8: true,
+      warnings: false
+    }
+  }));
   outputFile = 'react-nebo15-mask' + '.min.js';
 } else {
   outputFile = 'react-nebo15-mask' + '.js';
 }
 
 var config = {
+  externals: {
+    react: reactExternal
+  },
   entry: __dirname + '/src/index.js',
   devtool: 'source-map',
   output: {
