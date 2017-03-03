@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import { MaskedInput } from 'nebo15-mask';
 
@@ -29,6 +28,7 @@ export default class NeboMask extends Component {
       showAlways,
       onModelChange: model => onChange(model)
     });
+    this.mask.model = this.props.value;
   }
 
   render() {
@@ -40,6 +40,7 @@ export default class NeboMask extends Component {
       showAlways,
       withPlaceholder,
       onChange,
+      value,
       onBlur,
       ...rest
     } = props;
@@ -47,8 +48,8 @@ export default class NeboMask extends Component {
     return React.createElement(component, {
       ref: el => (this.masked = el),
       ...rest,
-      onBlur: () => onBlur(mask.model),
-      value: mask.viewValue || ''
+      vakue: mask.viewValue || '',
+      onBlur: () => onBlur(mask.model)
     });
   }
 }
