@@ -4,9 +4,9 @@
   "description": "React wrapper for nebo15-mask (github.com/Nebo15/nebo15-mask)",
   "main": "lib/react-nebo15-mask.min.js",
   "scripts": {
-    "build": "webpack --mode=build",
+    "build": "webpack && webpack --mode=build",
     "dev": "webpack --progress --colors --watch --mode=dev",
-    "test": "mocha --compilers js:babel-core/register --require ./test/helpers.js --colors -w ./test/*.spec.js"
+    "prepublish": "rimraf lib && npm run build"
   },
   "devDependencies": {
     "babel": "6.3.13",
@@ -22,6 +22,7 @@
     "chai-spies": "^0.7.1",
     "eslint": "1.7.2",
     "eslint-loader": "1.1.0",
+    "rimraf": "^2.6.1",
     "jquery": "^3.1.1",
     "jsdom": "^9.8.3",
     "mocha": "2.3.4",
