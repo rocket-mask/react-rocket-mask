@@ -11,27 +11,27 @@ var reactExternal = {
   root: 'React',
   commonjs2: 'react',
   commonjs: 'react',
-  amd: 'react'
+  amd: 'react',
 };
 
 if (env === 'build') {
   plugins.push(new UglifyJsPlugin({
     compressor: {
-      pure_getters: true,
+      pure_getters: true, // eslint-disable-line
       unsafe: true,
-      unsafe_comps: true,
-      screw_ie8: true,
-      warnings: false
-    }
+      unsafe_comps: true, // eslint-disable-line
+      screw_ie8: true, // eslint-disable-line
+      warnings: false,
+    },
   }));
   outputFile = 'react-nebo15-mask' + '.min.js';
 } else {
   outputFile = 'react-nebo15-mask' + '.js';
 }
 
-var config = {
+const config = {
   externals: {
-    react: reactExternal
+    react: reactExternal,
   },
   entry: __dirname + '/src/index.js',
   devtool: 'source-map',
@@ -40,27 +40,27 @@ var config = {
     filename: outputFile,
     library: libraryName,
     libraryTarget: 'umd',
-    umdNamedDefine: true
+    umdNamedDefine: true,
   },
   module: {
     loaders: [
       {
         test: /(\.jsx|\.js)$/,
         loader: 'babel',
-        exclude: /(node_modules|bower_components)/
+        exclude: /(node_modules|bower_components)/,
       },
       {
         test: /(\.jsx|\.js)$/,
         loader: 'eslint-loader',
-        exclude: /node_modules/
-      }
-    ]
+        exclude: /node_modules/,
+      },
+    ],
   },
   resolve: {
     root: path.resolve('./src'),
-    extensions: ['', '.js']
+    extensions: ['', '.js'],
   },
-  plugins: plugins
+  plugins: plugins,
 };
 
 module.exports = config;

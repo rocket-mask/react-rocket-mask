@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack && webpack --mode=build",
     "dev": "webpack --progress --colors --watch --mode=dev",
+    "test": "exit 0",
     "prepublish": "rimraf lib && npm run build"
   },
   "devDependencies": {
