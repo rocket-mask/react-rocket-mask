@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/Nebo15/react-nebo15-mask.svg?branch=master)](https://travis-ci.org/Nebo15/react-nebo15-mask)
 
-React wrapper for nebo15-mask (github.com/Nebo15/nebo15-mask)
+React wrapper for nebo15-mask (http://github.com/Nebo15/nebo15-mask)
 
 ### Properties
 
