@@ -7,10 +7,6 @@ export default class NeboMask extends Component {
     this.state = {};
   }
 
-  componentWillReceiveProps(props) {
-    this.mask.model = props.value;
-  }
-
   componentDidMount() {
     const {
       mask,
@@ -18,7 +14,7 @@ export default class NeboMask extends Component {
       hideOnBlur = true,
       showAlways,
       withPlaceholder,
-      onChange
+      onChange,
     } = this.props;
 
     this.mask = new MaskedInput(this.masked, mask, {
@@ -26,30 +22,29 @@ export default class NeboMask extends Component {
       showOnFocus,
       hideOnBlur,
       showAlways,
-      onModelChange: model => onChange(model)
+      onModelChange: model => onChange(model),
     });
-    this.mask.model = this.props.value;
+
+    if (this.props.value) this.mask.model = this.props.value;
+  }
+
+  componentWillReceiveProps(props) {
+    this.mask.model = props.value;
   }
 
   render() {
     const { props, mask = {} } = this;
     const {
       component = 'input',
-      showOnFocus,
-      hideOnBlur,
-      showAlways,
-      withPlaceholder,
-      onChange,
-      value,
+      showOnFocus, hideOnBlur, showAlways, withPlaceholder, onChange, value, // eslint-disable-line
       onBlur,
-      ...rest
+      ...rest,
     } = props;
 
     return React.createElement(component, {
       ref: el => (this.masked = el),
       ...rest,
-      vakue: mask.viewValue || '',
-      onBlur: () => onBlur(mask.model)
+      onBlur: () => onBlur(mask.model),
     });
   }
 }
