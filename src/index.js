@@ -29,7 +29,9 @@ export default class NeboMask extends Component {
   }
 
   componentWillReceiveProps(props) {
-    this.mask.model = props.value;
+    if (this.mask.value !== props.value) {
+      this.mask.value = this.mask.autocomplete(props.value);
+    }
   }
 
   render() {
