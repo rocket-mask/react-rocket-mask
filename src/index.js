@@ -25,7 +25,7 @@ export default class NeboMask extends Component {
       onModelChange: model => onChange(model),
     });
 
-    if (this.props.value) this.mask.model = this.props.value;
+    if (this.props.value) this.mask.model = this.mask.autocomplete(this.props.value);
   }
 
   componentWillReceiveProps(props) {
