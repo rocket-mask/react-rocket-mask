@@ -1,8 +1,8 @@
 {
-  "name": "react-nebo15-mask",
+  "name": "react-rocket-mask",
   "version": "1.0.8",
-  "description": "React wrapper for nebo15-mask (github.com/Nebo15/nebo15-mask)",
-  "main": "lib/react-nebo15-mask.min.js",
+  "description": "React wrapper for rocket-mask (github.com/rocket-mask/rocket-mask)",
+  "main": "lib/react-rocket-mask.min.js",
   "scripts": {
     "build": "webpack && webpack --mode=build",
     "dev": "webpack --progress --colors --watch --mode=dev",
@@ -34,7 +34,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nebo15/react-nebo15-mask.git"
+    "url": "https://github.com/rocket-mask/react-rocket-mask.git"
   },
   "keywords": [
     "webpack",
@@ -45,14 +45,14 @@
     "umd",
     "commonjs"
   ],
-  "author": "Nebo15",
+  "author": "Rocket Mask",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nebo15/react-nebo15-mask/issues"
+    "url": "https://github.com/rocket-mask/react-rocket-mask/issues"
   },
-  "homepage": "https://github.com/nebo15/react-nebo15-mask",
+  "homepage": "https://github.com/rocket-mask/react-rocket-mask",
   "dependencies": {
-    "nebo15-mask": "~0.1.7"
+    "rocket-mask": "~0.1.7"
   },
   "peerDependencies": {
     "react": "^15.0.0"

@@ -3,7 +3,7 @@ var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 var path = require('path');
 var env = require('yargs').argv.mode;
 
-var libraryName = 'ReactNebo15Mask';
+var libraryName = 'ReactRocketMask';
 
 var plugins = [], outputFile;
 
@@ -24,9 +24,9 @@ if (env === 'build') {
       warnings: false,
     },
   }));
-  outputFile = 'react-nebo15-mask' + '.min.js';
+  outputFile = 'react-rocket-mask' + '.min.js';
 } else {
-  outputFile = 'react-nebo15-mask' + '.js';
+  outputFile = 'react-rocket-mask' + '.js';
 }
 
 const config = {

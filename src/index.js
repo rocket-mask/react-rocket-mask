@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { MaskedInput } from 'nebo15-mask';
+import { MaskedInput } from 'rocket-mask';
 
-export default class NeboMask extends Component {
+export default class RocketMask extends Component {
   constructor(props) {
     super(props);
     this.state = {};
