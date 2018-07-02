@@ -1,6 +1,6 @@
 {
   "name": "react-rocket-mask",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "React wrapper for rocket-mask (github.com/rocket-mask/rocket-mask)",
   "main": "lib/react-rocket-mask.min.js",
   "scripts": {
