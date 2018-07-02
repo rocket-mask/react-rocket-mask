@@ -1,8 +1,8 @@
-# React Nebo15 Mask
+# React Rocket Mask
 
-[![Build Status](https://travis-ci.org/Nebo15/react-nebo15-mask.svg?branch=master)](https://travis-ci.org/Nebo15/react-nebo15-mask)
+[![Build Status](https://travis-ci.org/rocket-mask/react-rocket-mask.svg?branch=master)](https://travis-ci.org/rocket-mask/react-rocket-mask)
 
-React wrapper for nebo15-mask (http://github.com/Nebo15/nebo15-mask)
+React wrapper for rocket-mask (http://github.com/rocket-mask/rocket-mask)
 
 ### Properties
 
@@ -12,3 +12,7 @@ React wrapper for nebo15-mask (http://github.com/Nebo15/nebo15-mask)
 - showAlways - always show mask
 - component - (default, `input`) custom input component.
 - onChange, onBlur
+
+### Authors
+
+This package was originally created by Nebo15 team. Now, it's developing by community.
