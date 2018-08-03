@@ -28,12 +28,6 @@ export default class RocketMask extends Component {
     if (this.props.value) this.mask.model = this.mask.autocomplete(this.props.value);
   }
 
-  componentWillReceiveProps(props) {
-    if (this.mask.value !== props.value) {
-      this.mask.value = this.mask.autocomplete(props.value);
-    }
-  }
-
   render() {
     const { props, mask = {} } = this;
     const {
